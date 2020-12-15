@@ -7,85 +7,25 @@
 <section id="products_list">
     <h2>Choose the product right for you</h2>
 
-    <!-- vegetables group -->
-    <div class="vegetables">
-        <img src="images/products/vet5.jpg" alt="Organic Green Capsicum" width="200" height="200" />
-        <strong>Organic Green Capsicum</strong>
-        <i>$1.99</i>
-    </div>
-    <div class="vegetables">
-        <img src="images/products/vet6.jpg" alt="Organic Yellow Capsicum" width="200" height="200" />
-        <strong>Organic Yellow Capsicum</strong>
-        <i>$1.99</i>
-    </div>
-    <div class="vegetables">
-        <img src="images/products/vet7.jpg" alt="Organic Tel Cucumber" width="200" height="200" />
-        <strong>Organic Tel Cucumber</strong>
-        <i>$1.99</i>
-    </div>
-    <div class="vegetables">
-        <img src="images/products/vet8.jpg" alt="Organic Cherry Tomatoes" width="200" height="200" />
-        <strong>Organic Cherry Tomatoes (Spain)</strong>
-        <i>$1.99</i>
-    </div>
-    <div class="vegetables">
-        <img src="images/products/vet9.jpg" alt="Organic Bean Sprout" width="200" height="200" />
-        <strong>Organic Bean Sprout</strong>
-        <i>$1.99</i>
-    </div>
+    @if (Model != null)
+    {
+        var added = false;
+        foreach (var t in Model)
+        {
+            <div>
+                <img src="images/products/@t.image_filename" alt="@t.name" width="200" height="200" />
+                <strong>@t.name</strong>
+                <i>$@t.unit_price</i>
+            </div>
+            added = true;
+        }
 
-    <!-- Meat group -->
-    <div class="meat">
-        <img src="images/products/meat1.jpg" alt="Australia Grain Fed Striploin (Frozen)" width="200" height="200" />
-        <strong>Australia Grain Fed Striploin (Frozen)</strong>
-        <i>$15.99</i>
-    </div>
-    <div class="meat">
-        <img src="images/products/meat2.jpg" alt="A4 Wagyu Rib-eye (Frozen)" width="200" height="200" />
-        <strong>A4 Wagyu Rib-eye (Frozen)</strong>
-        <i>$19.99</i>
-    </div>
-    <div class="meat">
-        <img src="images/products/meat3.jpg" alt="US CAB Rib Eye Steak (Frozen)" width="200" height="200" />
-        <strong>US CAB Rib Eye Steak (Frozen)</strong>
-        <i>$17.99</i>
-    </div>
-    <div class="meat">
-        <img src="images/products/meat4.jpg" alt="Australia Wagyu Beef Diced (Frozen)" width="200" height="200" />
-        <strong>Australia Wagyu Beef Diced (Frozen)</strong>
-        <i>$18.99</i>
-    </div>
-    <div class="meat">
-        <img src="images/products/meat5.jpg" alt="Frozen Chicken Griller (Frozen)" width="200" height="200" />
-        <strong>Frozen Chicken Griller (Frozen)</strong>
-        <i>$13.99</i>
-    </div>
-    <div class="meat">
-        <img src="images/products/meat6.jpg" alt="Chicken Mid Joint Wing(Frozen)" width="200" height="200" />
-        <strong>Chicken Mid Joint Wing(Frozen)</strong>
-        <i>$11.99</i>
-    </div>
-
-    <!-- drink group -->
-    <div class="drink">
-        <img src="images/products/drink1.jpg" alt="Organic Oat Drink with Calcium" width="200" height="200" />
-        <strong>Organic Oat Drink with Calcium</strong>
-        <i>$5.99</i>
-    </div>
-    <div class="drink">
-        <img src="images/products/drink2.jpg" alt="Vitaminwater - Lemonade (Bottle)" width="200" height="200" />
-        <strong>Vitaminwater - Lemonade (Bottle)</strong>
-        <i>$4.99</i>
-    </div>
-    <div class="drink">
-        <img src="images/products/drink3.jpg" alt="Apple Juice 125ml x12 " width="200" height="200" />
-        <strong>Apple Juice 125ml x12 </strong>
-        <i>$5.99</i>
-    </div>
-
-    <div class="international">
-        <img src="images/products/international3.jpg" alt="Thailand dried mango" width="200" height="200" />
-        <strong>Thailand dried mango</strong>
-        <i>$4.99</i>
-    </div>
+        if (!added)
+        {
+            <div>
+                <strong>No product found.</strong>
+            </div>
+        }
+    }
+    
 </section>
