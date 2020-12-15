@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--
+
+  ///////////////////////////////////
+  //                               //
+  // HTML5/CSS Capstone Project    //
+  // WDD7 - 2020                   //
+  //                               //
+  // Andrew Tsang                  //
+  //                               //
+  ///////////////////////////////////
+ 
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>U Market Membership</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" 
+      type="image/png" 
+      href="images/Favicon.png">
+
+    <!-- Icons for touch devices apple, andriod etc. -->
+    <link rel="apple-touch-icon" sizes="128x128" href="favicon-128.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon-152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="favicon-167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png" />
+    <link rel="apple-touch-icon" sizes="196x196" href="favicon-196.png" />
+   
+    <!-- Set a "breakpoint" at 768pixels for the "desktop" stylesheet, while 
+         767pixels and LOWER get the "mobile" stylesheet. -->  
+    <link rel="stylesheet" 
+          type="text/css" 
+          href="styles/desktop_styles.css"
+          media="screen and (min-width: 768px)"
+    /> 
+    
+    <!-- "Mobile" devices we will consider to be 767 and UNDER -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="styles/mobile_styles.css"
+          media="screen and (max-width: 767px)"
+    />
+    
+    <!-- print stylesheet -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="styles/print.css"
+          media="print"
+    />
+   
+    <script src="old_ie.js"></script>
+    <!--[if LTE IE 9]>
+
+      <link rel="stylesheet" 
+            type="text/css" 
+            href="styles/desktop_styles.css"
+      /> 
+     
+      <style type="text/css">
+        header, nav, main, section, footer{
+          display: block;
+          
+        }
+        
+        footer div {
+          display: inline-block;
+        }
+        
+        footer a {
+          padding: 40px;
+        }
+        
+      </style>
+
+    <![endif]-->
+
+    <style>
+      
+      img.newsletter_svg {
+        width: 80px;
+        height: 45px;
+        float: left;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="wrapper">
+
+      <header>
+       
+        <span id="logo"><strong>U</strong> Market</span>
+        
+        <div id="utility_menu">
+          <a href="#">About Us</a>
+          <a href="#">FAQ</a>
+        </div>
+        
+        <div id="call_to_action">
+          <span>Order Now</span><span><a href="tel:1-888-123-1234">1 (888) 123-1234</a></span>
+        </div>
+        
+      </header>
+
+      <nav>
+       
+        <a href="#" id="menubutton">
+         <span id="topbar"></span>
+         <span id="middlebar"></span>
+         <span id="bottombar"></span>
+        </a>
+        
+        <ul id="navlist">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="promotion.html">Promotion</a></li>
+          <li><a class="breadcrumb" href="#">Membership</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+      
+      <main>
+        <img class="newsletter_svg" src="images/newsletter.svg" alt="Newsletter"  width="80" height="45"
+             onerror="this.src='newsletter.png'" />
+        <h1>Newsletter Registration</h1>
+        
+        <section>
+          <h2>Stay in touch</h2>
+          <p>
+          U market is a heathy food shop that primarily sells fresh food including organic food.  We are a local Winnipeg 
+          store located in downtown.  In order to achieve the sustainability, we partnered with local farms and bakeries to 
+          delivery our products that ensure fresh and low price.<br/>
+          In order to inform you about our latest products and promotion, please register our newsletter below.
+          </p>
+         
+          <form id="newsletter_form"
+                class="styled_form"
+                method="post"
+                action="http://www.scott-media.com/test/form_display.php"
+                autocomplete="off">
+
+            <fieldset>
+              <legend>Personal info</legend>  
+
+              <p>
+                <label for="first_name">First name:</label> 
+                <input type="text" 
+                       name="first_name"
+                       id="first_name" 
+                       maxlength="40"
+                       required="required"
+                       placeholder="Type your first name" />
+              </p>
+
+              <p>
+                <label for="last_name">Last name:</label> 
+                <input type="text" 
+                       name="last_name"
+                       id="last_name"
+                       maxlength="40"
+                       minlength="5"
+                       required
+                       placeholder="Type your last name" />
+              </p>
+
+              <p>
+                <label for="email_address">Email:</label>
+                <input type="email" 
+                       name="email_address"
+                       id="email_address"
+                       maxlength="40"
+                       required="required"
+                       placeholder="Type your email address" /> 
+              </p>
+
+              <p>
+                <label for="birthday">Birthday (yyyy-mm-dd)</label>
+                <input type="date" name="birthday" id="birthday" />
+              </p>
+
+            </fieldset>
+
+            <fieldset>
+              <legend>Perferences</legend>
+
+              <p>
+                Please choose delivery options:<br />
+                <input type="radio" name="devlivery_option" id="daily" value="daily"/>
+                <label for="daily">Daily</label>
+                <br />
+                <input type="radio" name="devlivery_option" id="weekly" value="weekly"/>
+                <label for="weekly">Weekly</label>
+                <br />
+                <input type="radio" name="devlivery_option" id="monthly" value="monthly"/>
+                <label for="monthly">Monthly</label>
+              </p>
+
+              <p>
+                <input type="checkbox" name="promotion" id="promotion" value="yes"/>
+                <label for="promotion">Receive promotion from our partners</label>
+              </p>
+
+              <p>
+                <select id="language" name="language" size="1">
+                  <option value="no language selected">Please select your preferred language</option>
+                  <option value="english">English</option>
+                  <option value="french">Français</option>
+                  <option value="chinese">中文</option>
+                </select>
+              </p>
+
+            </fieldset>
+
+            <p>
+              <input type="submit" id="sendform" value="Subscribe" title="Subscribe Newsletter"/> &nbsp; 
+              <input type="reset" value="Clear form" title="Clear form"/>
+            </p>
+
+          </form>
+        </section>
+      </main>
+      <footer>
+        <div id="footer_upper" class="footer_section">
+          <div>
+            <strong>COMPANY</strong>
+            <a href="">About Us</a>
+            <strong>Tips</strong>
+            <a href="#">Healthy tips</a><br />
+          </div>
+
+          <div>
+            <strong>HELP</strong>
+            <a href="#">Help Center</a>
+          </div>
+
+          <div>
+            <strong>CUSTOMER SERVICE</strong>
+            <a href="">Track Your Order</a>
+            <a href="">Payment Methods</a>
+            <a href="">Membership information</a>
+            <a href="">Contact Us</a>
+          </div>
+          <div>
+            <strong>STAY CONNECTED</strong>
+            <a href="https://www.facebook.com" target="_blank"><img src="images/Facebook.png" alt="Facebook" width="25" height="25"/></a>&ensp;
+            <a href="https://www.instagram.com" target="_blank"><img src="images/Instagram.png" alt="Instagram" width="25" height="25"/></a>&ensp;
+            <a href="https://www.pinterest.ca" target="_blank"><img src="images/Pinterest.png" alt="Pinterest" width="25" height="25"/></a>&ensp;
+            <a href="https://twitter.com/?lang=en" target="_blank"><img src="images/Twitter.png" alt="Twitter" width="25" height="25"/></a>
+            <strong>FIND OUR STORE</strong>
+            <p><a href="#"><img src="images/map.png" alt="map" width="25" height="25"/>515 Portage Ave</a></p>
+          </div>
+          
+        </div>
+        <hr />
+        <div class="footer_section">
+          <div id="footer_copyright" class="copyright">&copy;U Market Inc.</div>
+          <div id="footer_help"><a href="#">&gt;Help</a></div>
+          <div id="footer_term"><a href="#">&gt;Terms of Use</a></div>
+          <div id="footer_policy"><a href="#">&gt;Privacy Policy</a></div>
+        </div>
+      </footer>
+      <div id="last_modified">
+        <script>
+          document.scripts[document.scripts.length-1].parentNode.innerHTML = "Last Modified: " + document.lastModified;
+        </script>
+      </div>
+    </div><!-- /#wrapper -->
+
+  </body>
+</html>

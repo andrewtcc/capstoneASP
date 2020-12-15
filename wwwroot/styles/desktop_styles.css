@@ -1,0 +1,479 @@
+/*
+///////////////////////////////////////////
+//             External Desktop CS       //
+//         HTML5/CSS3 – Capstone         //
+//          Andrew Tsang - WDD7          //
+//              April 22, 2020           //
+///////////////////////////////////////////
+*/
+@keyframes logo_animation {
+  from {
+    text-shadow: 2px 2px 14px #fff;
+  }
+  to {
+    text-shadow: 2px 2px 14px #000;
+  }
+}
+
+body {
+  font-family: 'Noto Sans', Arial, 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+#wrapper {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+header {
+  position: relative;
+  background-color: #386a3a;
+  background-image: url(../images/medium_logo2.jpg);
+  background-repeat: no-repeat;
+  background-position: 300px 0;
+  background-size: 461px;
+  height: 188px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+header::after {
+  content: '';
+  height: 188px;
+  background-image: url(../images/header_overlay.png);
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+/*        opacity: 50%;*/
+}
+
+header #utility_menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+header #utility_menu a {
+  text-decoration: none;
+  color: #fff;
+  padding-right: 10px;
+}
+
+header #call_to_action {
+  text-align: center;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  background-color: #f39c05;
+  border-radius: 10px;
+}
+
+
+/* line break for desktop browser */
+header #call_to_action span {
+  display: block;
+}
+
+header #call_to_action span a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* Pure phone icons css*/
+header #call_to_action span a::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 16px;
+  width: 4px;
+  height: 8px;
+  border-width: 5px 0 5px 2px;
+  border-style: solid;
+  border-color: #000;
+  background: transparent;
+  -webkit-border-top-left-radius: 3px 5px;
+  -webkit-border-bottom-left-radius: 3px 5px;
+  -moz-border-radius-topleft: 3px 5px;
+  -moz-border-radius-bottomleft: 3px 5px;
+  border-top-left-radius: 3px 5px;
+  border-bottom-left-radius: 3px 5px;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+header span#logo {
+  display: inline-block;
+  color: #FFF;
+  font-size: 3.5em;
+  padding-top: 40px;
+  padding-left: 20px;
+  font-weight: 700;
+  -webkit-animation: logo_animation 2s ease-in-out .1s forwards;
+  animation: logo_animation 2s ease-in-out .1s forwards;
+}
+
+header span#logo strong {
+  color: #f39c05;
+  
+}
+
+/*********************/
+/* Navigation bar CSS*/
+/*********************/
+nav{
+  background-color: #476d53;
+  height: 70px;
+}
+
+nav ul{
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  padding-left: 11px;
+}
+
+nav ul li{
+  position: relative;
+  list-style-type: none;
+  display: inline-block;
+}
+
+nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: #f9f9f9;
+  font-size: 1.4em;
+/*        font-weight: 700;*/
+  position: relative;
+  padding-top: 15px;
+  box-sizing: border-box;
+  padding-left: 18px;
+  padding-right: 30px;
+  padding-bottom: 6px;
+  transition: all .2s ease-in-out;
+  border: 2px solid transparent;
+}
+nav ul li a::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #f39c05;
+  transition: width .3s ease-in-out;
+}
+nav ul li a:hover::after{
+  width: 90%;
+}
+
+nav ul li a.breadcrumb {
+  color: #f39c05;
+}
+
+
+/***********************/
+/* Main Index page CSS */
+/***********************/
+div {
+  box-sizing: border-box;
+}
+
+div#slider {
+  clear: both;
+  width: 100%;
+  background: #efefef;
+}
+
+div#slider #slide_left {
+  float: left; 
+  padding-top: 60px; /* center the left arrow */
+  padding-left: 10px;
+  font-size: 3em;
+}
+
+div#slider #slide_right {
+  float: right; 
+  padding-top: 60px; /* center the right arrow */
+  padding-right: 10px;
+  font-size: 3em;
+}
+
+div#slider img {
+  display: block;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+
+h1 {
+  font-size: 1.5em;
+  padding-left: 20px;
+  color: #386a3a;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+div.callouts {
+  clear: both;
+}
+
+div.callout {
+  padding: 0 20px;
+  min-height: 100px;
+  width: 33.33%;
+  float: left;
+}
+
+div.callout h2 {
+  font-size: 1.3em;
+  border-left: 5px solid #f39c05;
+  border-bottom: 1px solid #ccc;
+  padding-left: 5px;
+}
+
+section {
+  clear: both;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/********************/
+/* Product page CSS */
+/********************/
+section#products_list div {
+  display: inline-block;
+  width: 200px;
+  height: 280px;
+  vertical-align: bottom;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #386a3a;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.6);
+}
+
+section#products_list div img {
+  display: block;
+}
+
+section#products_list div strong {
+  display: block;
+}
+
+/**********************/
+/* Promotion page CSS */
+/**********************/
+div#promotion_banner {
+  background-color: #353;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  padding: 20px;
+}
+
+div#promotion_banner span{
+  color: #fb0;
+}
+
+div#promotion_banner span#up_to_text {
+  border-top: 3px solid #fb0;
+  border-bottom: 3px solid #fb0;
+}
+
+div#promotion_banner p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div#promotion_banner p+p {
+  font-size: 0.5em;
+  width: 70%;
+  margin: 5px auto;
+  
+}
+
+div#promotion_banner a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #fff;
+  color: #353;
+  font-size: 0.6em;
+/*  border: 1px solid #fb0;*/
+  border-radius: 20px;
+  margin-top: 5px;
+  padding: 3px 20px;
+}
+
+h1+section {
+  padding-top: 0;
+}
+
+table#discount {
+  border: 1px solid #353;
+  border-spacing: 0;
+  border-collapse: collapse;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  width: 50%
+}
+
+table#discount td, 
+table#discount th {
+  padding: 6px 20px;
+  font-size: 1.2em;
+}
+
+table#discount tr:last-of-type td:last-of-type {
+  color: #f00;
+  font-size: 1.7em;
+}
+
+/***********************/
+/* Membership page CSS */
+/***********************/
+form.styled_form fieldset {
+  background-color: #bee9cc;
+  width: 90%;
+  border: 1px solid #333;
+  margin: 0;
+}
+
+/* add spacing between two feildsets */
+form.styled_form fieldset+fieldset {
+  margin-top: 20px;
+}
+
+form.styled_form legend {
+  background-color: #666;
+  color: #eee;
+  padding: 4px;
+  border: 1px solid #333;
+}
+
+form.styled_form label {
+  width: 200px;
+  display: block;
+  clear: both;
+  float: left;
+  margin-top: 5px;
+}
+
+form.styled_form input[type="text"],
+form.styled_form input[type="email"],
+form.styled_form input[type="date"] {
+  width: 250px;
+  background-color: #ffe;
+  border: 2px solid #666;
+  padding: 6px;
+  font-size: 1.05em;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+/* Hover effect for the form fields */
+form.styled_form input[type="text"]:hover,
+form.styled_form input[type="email"]:hover,
+form.styled_form input[type="date"]:hover {
+  background-color: #cce;
+  border: 2px solid #00f;
+
+}
+
+/* focus effort for the text input */
+form.styled_form input[type="text"]:focus {
+  border: 2px solid #00f;
+  background-color: #ccc;
+}
+
+/* Stop float from previous form items */
+form.styled_form input + label {
+  float: none;
+  display: inline;
+  width: auto;
+}
+
+/* Increase the font size for selection box */
+form.styled_form select {
+  font-size: 1.05em;
+}
+
+form.styled_form input[type="submit"],
+form.styled_form input[type="Reset"]{
+  border: 2px solid #336;
+  background-color: #fff;
+  font-size: 1.3em;
+}
+
+/* Hover effect for the form buttons */
+form.styled_form input[type="submit"]:hover,
+form.styled_form input[type="Reset"]:hover{
+  background-color: #bee9cc;
+  font-size: 1.3em;
+}
+
+/*****************/
+/* Help page CSS */
+/*****************/
+section#help {
+  display: flex;
+}
+      
+section#help div {
+  flex: 1;
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+}
+      
+
+footer {
+  height: 240px;
+  background-color: #386a3a;
+  color: #fff;
+  text-align: center;
+}
+
+footer strong {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+footer div.footer_section {
+  display: flex;
+}
+
+footer div.footer_section div{
+  flex: 1;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+footer a{
+  display: inline-block;
+  padding-bottom: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+

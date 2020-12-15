@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--
+
+  ///////////////////////////////////
+  //                               //
+  // HTML5/CSS Capstone Project    //
+  // WDD7 - 2020                   //
+  //                               //
+  // Andrew Tsang                  //
+  //                               //
+  ///////////////////////////////////
+ 
+-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>U Market Products</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&display=swap" rel="stylesheet">
+    
+    <link rel="icon" 
+      type="image/png" 
+      href="images/Favicon.png">
+
+    <!-- Icons for touch devices apple, andriod etc. -->
+    <link rel="apple-touch-icon" sizes="128x128" href="favicon-128.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon-152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="favicon-167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png" />
+    <link rel="apple-touch-icon" sizes="196x196" href="favicon-196.png" />
+   
+    <!-- Set a "breakpoint" at 768pixels for the "desktop" stylesheet, while 
+         767pixels and LOWER get the "mobile" stylesheet. -->  
+    <link rel="stylesheet" 
+          type="text/css" 
+          href="styles/desktop_styles.css"
+          media="screen and (min-width: 768px)"
+    /> 
+    
+    <!-- "Mobile" devices we will consider to be 767 and UNDER -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="styles/mobile_styles.css"
+          media="screen and (max-width: 767px)"
+    />
+    
+    <!-- print stylesheet -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="styles/print.css"
+          media="print"
+    />
+   
+    <script src="old_ie.js"></script>
+    <!--[if LTE IE 9]>
+
+      <link rel="stylesheet" 
+            type="text/css" 
+            href="styles/desktop_styles.css"
+      /> 
+     
+      <style type="text/css">
+        header, nav, main, section, footer{
+          display: block;
+          
+        }
+        
+        footer div {
+          display: inline-block;
+        }
+        
+        footer a {
+          padding: 40px;
+        }
+        
+      </style>
+
+    <![endif]-->
+
+    <style>
+      
+    </style>
+
+  </head>
+  <body>
+        
+    <div id="wrapper">
+    <!-- Use target pseudo-class to simulate the click event of filter function of the products.  
+         In order to keep at the top of the page, we required to put div here. -->
+<!--    <div id="vegetables_filter">-->
+      <header>
+       
+        <span id="logo"><strong>U</strong> Market</span>
+        
+        <div id="utility_menu">
+          <a href="#">About Us</a>
+          <a href="#">FAQ</a>
+        </div>
+        
+        <div id="call_to_action">
+          <span>Order Now</span><span><a href="tel:1-888-123-1234">1 (888) 123-1234</a></span>
+        </div>
+        
+      </header>
+
+      <nav>
+       
+        <a href="#" id="menubutton">
+         <span id="topbar"></span>
+         <span id="middlebar"></span>
+         <span id="bottombar"></span>
+        </a>
+        
+        <ul id="navlist">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="breadcrumb" href="#">Products</a></li>
+          <li><a href="promotion.html">Promotion</a></li>
+          <li><a href="membership.html">Membership</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </nav>
+      
+      <main>
+
+               
+        <h1>Best products in the market</h1>
+                  
+<!--
+        <section id="products_filter">
+          <a href="#vegetables_filter">vetagables</a>
+        </section>
+-->
+        
+        <section id="products_list">
+          <h2>Choose the product right for you</h2>
+          
+          <!-- vegetables group -->
+          <div class="vegetables" >
+            <img src="images/products/vet5.jpg" alt="Organic Green Capsicum" width="200" height="200"/>
+            <strong>Organic Green Capsicum</strong>
+            <i>$1.99</i>
+          </div>          
+          <div class="vegetables" >
+            <img src="images/products/vet6.jpg" alt="Organic Yellow Capsicum" width="200" height="200"/>
+            <strong>Organic Yellow Capsicum</strong>
+            <i>$1.99</i>
+          </div>
+          <div class="vegetables" >
+            <img src="images/products/vet7.jpg" alt="Organic Tel Cucumber" width="200" height="200"/>
+            <strong>Organic Tel Cucumber</strong>
+            <i>$1.99</i>
+          </div>
+          <div class="vegetables" >
+            <img src="images/products/vet8.jpg" alt="Organic Cherry Tomatoes" width="200" height="200"/>
+            <strong>Organic Cherry Tomatoes (Spain)</strong>
+            <i>$1.99</i>
+          </div>
+          <div class="vegetables" >
+            <img src="images/products/vet9.jpg" alt="Organic Bean Sprout" width="200" height="200"/>
+            <strong>Organic Bean Sprout</strong>
+            <i>$1.99</i>
+          </div>
+          
+          <!-- Meat group -->
+          <div class="meat" >
+            <img src="images/products/meat1.jpg" alt="Australia Grain Fed Striploin (Frozen)" width="200" height="200"/>
+            <strong>Australia Grain Fed Striploin (Frozen)</strong>
+            <i>$15.99</i>
+          </div>
+          <div class="meat" >
+            <img src="images/products/meat2.jpg" alt="A4 Wagyu Rib-eye (Frozen)" width="200" height="200"/>
+            <strong>A4 Wagyu Rib-eye (Frozen)</strong>
+            <i>$19.99</i>
+          </div>
+          <div class="meat" >
+            <img src="images/products/meat3.jpg" alt="US CAB Rib Eye Steak (Frozen)" width="200" height="200"/>
+            <strong>US CAB Rib Eye Steak (Frozen)</strong>
+            <i>$17.99</i>
+          </div>
+          <div class="meat" >
+            <img src="images/products/meat4.jpg" alt="Australia Wagyu Beef Diced (Frozen)" width="200" height="200"/>
+            <strong>Australia Wagyu Beef Diced (Frozen)</strong>
+            <i>$18.99</i>
+          </div>
+          <div class="meat" >
+            <img src="images/products/meat5.jpg" alt="Frozen Chicken Griller (Frozen)" width="200" height="200"/>
+            <strong>Frozen Chicken Griller (Frozen)</strong>
+            <i>$13.99</i>
+          </div>
+          <div class="meat" >
+            <img src="images/products/meat6.jpg" alt="Chicken Mid Joint Wing(Frozen)" width="200" height="200"/>
+            <strong>Chicken Mid Joint Wing(Frozen)</strong>
+            <i>$11.99</i>
+          </div>
+
+          <!-- drink group -->
+          <div class="drink" >
+            <img src="images/products/drink1.jpg" alt="Organic Oat Drink with Calcium" width="200" height="200"/>
+            <strong>Organic Oat Drink with Calcium</strong>
+            <i>$5.99</i>
+          </div>
+          <div class="drink" >
+            <img src="images/products/drink2.jpg" alt="Vitaminwater - Lemonade (Bottle)" width="200" height="200"/>
+            <strong>Vitaminwater - Lemonade (Bottle)</strong>
+            <i>$4.99</i>
+          </div>
+          <div class="drink" >
+            <img src="images/products/drink3.jpg" alt="Apple Juice 125ml x12 " width="200" height="200"/>
+            <strong>Apple Juice 125ml x12 </strong>
+            <i>$5.99</i>
+          </div>
+          
+          <div class="international">
+            <img src="images/products/international3.jpg" alt="Thailand dried mango" width="200" height="200"/>
+            <strong>Thailand dried mango</strong>
+            <i>$4.99</i>
+          </div>
+        </section>
+        
+
+      </main>
+      <footer>
+        <div id="footer_upper" class="footer_section">
+          <div>
+            <strong>COMPANY</strong>
+            <a href="">About Us</a>
+            <strong>Tips</strong>
+            <a href="#">Healthy tips</a><br />
+          </div>
+
+          <div>
+            <strong>HELP</strong>
+            <a href="#">Help Center</a>
+          </div>
+
+          <div>
+            <strong>CUSTOMER SERVICE</strong>
+            <a href="">Track Your Order</a>
+            <a href="">Payment Methods</a>
+            <a href="">Membership information</a>
+            <a href="">Contact Us</a>
+          </div>
+          <div>
+            <strong>STAY CONNECTED</strong>
+            <a href="https://www.facebook.com" target="_blank"><img src="images/Facebook.png" alt="Facebook" width="25" height="25"/></a>&ensp;
+            <a href="https://www.instagram.com" target="_blank"><img src="images/Instagram.png" alt="Instagram" width="25" height="25"/></a>&ensp;
+            <a href="https://www.pinterest.ca" target="_blank"><img src="images/Pinterest.png" alt="Pinterest" width="25" height="25"/></a>&ensp;
+            <a href="https://twitter.com/?lang=en" target="_blank"><img src="images/Twitter.png" alt="Twitter" width="25" height="25"/></a>
+            <strong>FIND OUR STORE</strong>
+            <p><a href="#"><img src="images/map.png" alt="map" width="25" height="25"/>515 Portage Ave</a></p>
+          </div>
+          
+        </div>
+        <hr />
+        <div class="footer_section">
+          <div id="footer_copyright" class="copyright">&copy;U Market Inc.</div>
+          <div id="footer_help"><a href="#">&gt;Help</a></div>
+          <div id="footer_term"><a href="#">&gt;Terms of Use</a></div>
+          <div id="footer_policy"><a href="#">&gt;Privacy Policy</a></div>
+        </div>
+      </footer>
+      <div id="last_modified">
+        <script>
+          document.scripts[document.scripts.length-1].parentNode.innerHTML = "Last Modified: " + document.lastModified;
+        </script>
+      </div>
+    </div><!-- /#wrapper -->
+
+  </body>
+</html>
