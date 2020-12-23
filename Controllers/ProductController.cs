@@ -38,7 +38,7 @@ namespace capstoneASP.Controllers
 
             this.mySqlConnection.Open();
             var cmd = this.mySqlConnection.CreateCommand() as MySqlCommand;
-            cmd.CommandText = @"SELECT product_id, name, short_desc, description,unit_price,image_filename,category,quantity_in_stock, origin, version,obsolete,weight FROM products";
+            cmd.CommandText = @"SELECT product_id, name, short_desc, description,unit_price,image_filename,category,quantity_in_stock, origin, version,obsolete,weight FROM Products";
 
             using (var reader = await cmd.ExecuteReaderAsync())
                 while (await reader.ReadAsync())
